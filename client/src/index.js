@@ -1,29 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/App";
-import { BrowserRouter } from "react-router-dom";
-import { createGlobalStyle } from "styled-components";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from "react-router-dom";
+import './index.css';
+import App from './App';
 
-const GlobalStyle = createGlobalStyle`
-  *,
-  *::before, 
-  *::after {
-    box-sizing: border-box;
-  }
-
-  html, body {
-    margin: 0;
-  }
-
-  body {
-    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  }
-`;
-
-ReactDOM.render(
-  <BrowserRouter>
-    <GlobalStyle />
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <Router>
     <App />
-  </BrowserRouter>,
-  document.getElementById("root")
+  </Router>,
+
 );
