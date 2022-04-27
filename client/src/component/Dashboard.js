@@ -17,11 +17,14 @@ const Dashboard = (props) => {
   return (
       <div>
         <h1>dashboard</h1>
+        <div>
         { 
           props.loggedInStatus ? 
           <Link to='/logout' onClick={handleClick}>Log Out</Link> : 
           null
         }
+        </div>
+        
       </div>
     );
   };
