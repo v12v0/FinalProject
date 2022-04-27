@@ -4,6 +4,8 @@ import {Switch, Route} from 'react-router-dom'
 import Login from './component/Login';
 import Home from './component/Home';
 import Signup from './component/Signup';
+import Dashboard from './component/Dashboard';
+import Logout from './component/Logout';
 
 class App extends Component {
   constructor(props) {
@@ -14,12 +16,11 @@ class App extends Component {
      };
   }
 componentDidMount() {
-  this.loginStatus()
-}
-loginStatus = () => {
-    axios.get('http://localhost:3001/logged_in', 
-    {withCredentials: true})    
-.then(response => {
+    this.loginStatus()
+  }
+  loginStatus = () => {
+    axios.get('http://localhost:3001/logged_in', {withCredentials: true})
+    .then(response => {
       if (response.data.logged_in) {
         this.handleLogin(response)
       } else {
@@ -40,15 +41,44 @@ handleLogout = () => {
     user: {}
     })
   }
-  
-  render() {
+render() {
     return (
       <div>
+        
           <Switch>
-            <Route exact path='/' component={Home}/>
-            <Route exact path='/login' component={Login}/>
-            <Route exact path='/signup' component={Signup}/>
+            <Route 
+              exact path='/' 
+              render={props => (
+              <Home {...props} loggedInStatus={this.state.isLoggedIn}/>
+              )}
+            />
+            <Route 
+              exact path='/login' 
+              render={props => (
+              <Login {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>
+              )}
+            />
+            <Route 
+              exact path='/signup' 
+              render={props => (
+              <Signup {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>
+              )}
+            />
+             <Route 
+              exact path='/Dashboard' 
+              render={props => (
+              <Dashboard {...props} loggedInStatus={this.state.isLoggedIn}/>
+              )}
+            />
+             <Route 
+              exact path='/logout' 
+              render={props => (
+              <Logout {...props} loggedInStatus={this.state.isLoggedIn}/>
+              )}
+            />
+
           </Switch>
+        
       </div>
     );
   }
