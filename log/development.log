@@ -3248,3 +3248,95 @@ Processing by RecipesController#index as */*
 Completed 200 OK in 36ms (Views: 28.7ms | ActiveRecord: 1.3ms | Allocations: 13029)
 
 
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-04-28 11:00:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-04-28 11:00:07 -0500
+  
+SyntaxError (/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:2: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:13: syntax error, unexpected ===, expecting `end'
+=======
+^~~
+/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:38: syntax error, unexpected >>, expecting `end'
+>>>>>>> main
+^~
+/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:44: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:48: syntax error, unexpected ===, expecting `end'
+=======
+^~~
+/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:55: syntax error, unexpected >>, expecting `end'
+>>>>>>> main
+^~
+):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected <<
+app/controllers/users_controller.rb:13: syntax error, unexpected ===, expecting `end'
+app/controllers/users_controller.rb:38: syntax error, unexpected >>, expecting `end'
+app/controllers/users_controller.rb:44: syntax error, unexpected <<
+app/controllers/users_controller.rb:48: syntax error, unexpected ===, expecting `end'
+app/controllers/users_controller.rb:55: syntax error, unexpected >>, expecting `end'
+app/controllers/users_controller.rb:2: syntax error, unexpected <<
+app/controllers/users_controller.rb:13: syntax error, unexpected ===, expecting `end'
+app/controllers/users_controller.rb:38: syntax error, unexpected >>, expecting `end'
+app/controllers/users_controller.rb:44: syntax error, unexpected <<
+app/controllers/users_controller.rb:48: syntax error, unexpected ===, expecting `end'
+app/controllers/users_controller.rb:55: syntax error, unexpected >>, expecting `end'
+Started GET "/recipes" for 127.0.0.1 at 2022-04-28 11:00:07 -0500
+Processing by RecipesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.42ms)
+Completed 200 OK in 49ms (Views: 28.9ms | ActiveRecord: 3.4ms | Allocations: 14533)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-04-28 11:00:16 -0500
+  
+SyntaxError (/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:2: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:13: syntax error, unexpected ===, expecting `end'
+=======
+^~~
+/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:38: syntax error, unexpected >>, expecting `end'
+>>>>>>> main
+^~
+/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:44: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:48: syntax error, unexpected ===, expecting `end'
+=======
+^~~
+/Users/vivo/Phase-5/FinalProject/app/controllers/users_controller.rb:55: syntax error, unexpected >>, expecting `end'
+>>>>>>> main
+^~
+):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected <<
+app/controllers/users_controller.rb:13: syntax error, unexpected ===, expecting `end'
+app/controllers/users_controller.rb:38: syntax error, unexpected >>, expecting `end'
+app/controllers/users_controller.rb:44: syntax error, unexpected <<
+app/controllers/users_controller.rb:48: syntax error, unexpected ===, expecting `end'
+app/controllers/users_controller.rb:55: syntax error, unexpected >>, expecting `end'
+app/controllers/users_controller.rb:2: syntax error, unexpected <<
+app/controllers/users_controller.rb:13: syntax error, unexpected ===, expecting `end'
+app/controllers/users_controller.rb:38: syntax error, unexpected >>, expecting `end'
+app/controllers/users_controller.rb:44: syntax error, unexpected <<
+app/controllers/users_controller.rb:48: syntax error, unexpected ===, expecting `end'
+app/controllers/users_controller.rb:55: syntax error, unexpected >>, expecting `end'
