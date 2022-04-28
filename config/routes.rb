@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
-  post '/login',    to: 'sessions#create'
-  post '/logout',   to: 'sessions#destroy'
-  get '/logged_in', to: 'sessions#is_logged_in?'
-  resources :users, only: [:create, :show, :index] do 
-      resources :items, only: [:create, :show, :index, :destroy]
-   end
-
-   resources :posts, only: [:create, :show, :index] do 
-    resources :items, only: [:create, :show, :index, :destroy]
- end
-  end
+  resources :recipes, only: [:index, :create]
+  post "/signup", to: "users#create"
+  get "/me", to: "users#show"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
+end
