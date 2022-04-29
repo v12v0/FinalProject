@@ -1,62 +1,40 @@
 import { useState } from "react";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
-import SignUpForm from "../components/SignUpForm";
-import { Button } from "../styles";
+import Footer from "../components/Footer";
 
 function Login({ onLogin }) {
-  const [showLogin, setShowLogin] = useState(true);
+
 
   return (
-    <Wrapper>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-      <Logo>Reciplease</Logo>
-      {showLogin ? (
-        <>
-          <LoginForm onLogin={onLogin} />
-          <Divider />
-          <p>
-            Don't have an account? &nbsp;
-            <Button color="secondary" onClick={() => setShowLogin(false)}>
-              Sign Up
-            </Button>
-          </p>
-        </>
-      ) : (
-        <>
-          <SignUpForm onLogin={onLogin} />
-          <Divider />
-          <p>
-            Already have an account? &nbsp;
-            <Button color="secondary" onClick={() => setShowLogin(true)}>
-              Log In
-            </Button>
-          </p>
-        </>
-      )}
-    </Wrapper>
+    <div>
+
+      <header class="shadow-sm bg-slate-50">
+        <div
+          class="flex items-center justify-between h-16 max-w-screen-xl px-4 mx-auto"
+        >
+          <div class="flex flex-1 w-0 lg:hidden">
+            <button class="p-2 text-gray-600 bg-slate-50 rounded-full" type="button">
+            </button>
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <h1 class="w-25 h-10 text-center flex justify-center items-center"> Squares</h1>
+          </div>
+
+          <div class="flex justify-center items-center flex-1 w-0 lg:hidden">
+            <button class="p-2 text-gray-500 bg-slate-50 rounded-full" type="button">
+            </button>
+          </div>
+        </div>
+
+        
+      </header>
+      <LoginForm onLogin={onLogin} />
+      <Footer />
+    </div>
   );
 }
 
-const Logo = styled.h1`
-  font-family: "Permanent Marker", cursive;
-  font-size: 3rem;
-  color: deeppink;
-  margin: 8px 0 16px;
-`;
-
-const Wrapper = styled.section`
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 16px;
-`;
-
-const Divider = styled.hr`
-  border: none;
-  border-bottom: 1px solid #ccc;
-  margin: 16px 0;
-`;
 
 export default Login;
