@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
-import NavBar from "./NavBar";
-import Login from "../pages/Login";
-import RecipeList from "../pages/RecipeList";
-import NewRecipe from "../pages/NewRecipe";
+import NavBar from "./components/NavBar";
+import Login from "./pages/Login";
+import RecipeList from "./pages/RecipeList";
+import NewRecipe from "./pages/NewRecipe";
+import Footer from "./components/Footer";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -20,12 +21,8 @@ function App() {
   if (!user) return <Login onLogin={setUser} />;
 
   return (
-    <>
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div>
       <NavBar user={user} setUser={setUser} />
-      <main>
         <Switch>
           <Route path="/new">
             <NewRecipe user={user} />
@@ -34,8 +31,8 @@ function App() {
             <RecipeList />
           </Route>
         </Switch>
-      </main>
-    </>
+      <Footer/>
+    </div>
   );
 }
 

@@ -21,6 +21,7 @@ function NavBar({ user, setUser }) {
         <Button as={Link} to="/new">
           New Recipe
         </Button>
+        
         <Button variant="outline" onClick={handleLogoutClick}>
           Logout
         </Button>
