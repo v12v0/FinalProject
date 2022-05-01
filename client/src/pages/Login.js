@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
 import Footer from "../components/Footer";
+import Square from "../images/square.svg"
+
 
 function Login({ onLogin }) {
 
@@ -19,7 +21,8 @@ function Login({ onLogin }) {
           </div>
 
           <div class="flex items-center space-x-4">
-            <h1 class="w-25 h-10 text-center flex justify-center items-center"> Squares</h1>
+            <img src={Square} alt="square logo" class="w-10 h-10"/>
+            <h1 class="text-xl w-25 h-10 text-center flex justify-center items-center"> My Squares</h1>
           </div>
 
           <div class="flex justify-center items-center flex-1 w-0 lg:hidden">

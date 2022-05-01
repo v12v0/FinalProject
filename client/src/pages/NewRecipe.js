@@ -38,7 +38,7 @@ function NewRecipe({ user }) {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
-        history.push("/");
+        history.push("/Messages");
       } else {
         r.json().then((err) => setErrors(err.errors));
       }

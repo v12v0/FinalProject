@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { Button } from "../styles";
+import { NavLink } from "react-router-dom";
+// import styled from "styled-components";
+// import { Button } from "../styles";
+// import Square from "../images/square.svg"
+
 
 function NavBar({ user, setUser }) {
   function handleLogoutClick() {
@@ -13,48 +15,100 @@ function NavBar({ user, setUser }) {
   }
 
   return (
-    <Wrapper>
-      <Logo>
+    <div>
+      {/* <div>
         <Link to="/">Reciplease</Link>
-      </Logo>
-      <Nav>
-        <Button as={Link} to="/new">
+      </div>
+      <div>
+        <Link to="/new">
           New Recipe
-        </Button>
-        
-        <Button variant="outline" onClick={handleLogoutClick}>
+        </Link>
+
+        <button variant="outline" onClick={handleLogoutClick}>
           Logout
-        </Button>
-      </Nav>
-    </Wrapper>
+        </button>
+      </div> */}
+
+<header className="shadow-sm md:hidden bg-gray-100 dark:bg-gray-800 text-black dark:text-gray-200">
+            <div
+                className="flex items-center justify-between space-around h-16 max-w-screen-xl px-4 mx-auto "
+            >
+                <div className="flex flex-1 w-0 lg:hidden sm:text-center">
+                    <NavLink to="/Squares">My Squares</NavLink>
+                </div>
+                <div className="flex items-center space-x-4">
+                    <div className="hidden mb-0 lg:flex">
+                        <NavLink to="/">My Squares</NavLink>
+                    </div>
+                </div>
+                <ul
+                    className="items-center justify-center hidden space-x-8 text-sm font-medium lg:flex lg:flex-1 lg:w-0"
+                >
+                    <li className="relative text-black dark:text-gray-200">
+                        <div className="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-black dark:text-white text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out">
+                            {/* <img src={mapSVG} alt="home icon" className="w-6 h-6 mr-3" /> */}
+                            <NavLink to="/Squares">Home</NavLink>
+                        </div>
+                    </li>
+                    <li className="relative">
+                        <div className="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-black dark:text-white text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out">
+                            {/* <img src={fishingSVG} alt="home icon" className="w-6 h-6 mr-3 " /> */}
+                            <NavLink to="/Messages">Messages</NavLink>
+                        </div>
+                    </li>
+                    <li className="relative">
+                        <div className="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-black dark:text-white text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out">
+                            {/* <img src={hookSVG} alt="home icon" className="w-6 h-6 mr-3 " /> */}
+                            <NavLink to="/About">About</NavLink>
+                        </div>
+                    </li>
+                    <li className="relative">
+                        <div className="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-black dark:text-white text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out">
+                            {/* <img src={hookSVG} alt="home icon" className="w-6 h-6 mr-3 " /> */}
+                            <p onClick={handleLogoutClick} className="cursor-pointer">Log Out</p>
+                        </div>
+                    </li>
+                   
+                </ul>
+            </div>
+
+            {/* mobile view */}
+            <div className="border-t border-gray-100 lg:hidden text-black dark:text-gray-200">
+                <ul
+                    className="flex items-center justify-center p-4 overflow-x-auto text-sm font-medium"
+                >
+                    <li className="relative">
+                        <div className="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-black dark:text-gray-200 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out">
+                            {/* <img src={mapSVG} alt="home icon" className="w-6 h-6 mr-3" /> */}
+                            <NavLink to="/Squares">Squares</NavLink>
+                        </div>
+                    </li>
+                    <li className="relative">
+                        <div className="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-black dark:text-gray-200 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out">
+                            {/* <img src={fishingSVG} alt="home icon" className="w-6 h-6 mr-3 " /> */}
+                            <NavLink to="/Messages">Messages</NavLink>
+                        </div>
+                    </li>
+                    <li className="relative">
+                        <div className="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-black dark:text-gray-200 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out">
+                            {/* <img src={hookSVG} alt="home icon" className="w-6 h-6 mr-3 " /> */}
+                            <NavLink to="/About">About</NavLink>
+                        </div>
+                    </li>
+                    <li className="relative">
+                        <div className="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-black dark:text-gray-200 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out">
+                            {/* <img src={hookSVG} alt="home icon" className="w-6 h-6 mr-3 " /> */}
+                            <p onClick={handleLogoutClick} className="cursor-pointer">Log Out</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            {/* end ofmobile view */}
+        </header>
+    </div>
   );
 }
 
-const Wrapper = styled.header`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-`;
 
-const Logo = styled.h1`
-  font-family: "Permanent Marker", cursive;
-  font-size: 3rem;
-  color: deeppink;
-  margin: 0;
-  line-height: 1;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-`;
-
-const Nav = styled.nav`
-  display: flex;
-  gap: 4px;
-  position: absolute;
-  right: 8px;
-`;
 
 export default NavBar;
