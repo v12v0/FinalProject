@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { Box, Button } from "../styles";
+import { NavLink } from "react-router-dom";
 
-function Messages() {
+function Messages({ onDeletePost, posts }) {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -13,44 +10,59 @@ function Messages() {
       .then(setRecipes);
   }, []);
 
+  function handleDeletePost() {
+    // fetch(`/recipes/${id}`, {
+    //   method: "DELETE",
+    // }).then((r) => {
+    //   if (r.ok) {
+    //     onDeletePost(post);
+    //   }
+    // });
+    console.log({ recipes })
+  }
+
   return (
-    <Wrapper className="grid grid-cols-5 text-black dark:text-gray-200">
-        <div>
-        <Link to="/new">New announcement</Link>
-      </div>
-      {recipes.length > 0 ? (
-        recipes.map((recipe) => (
-          <Recipe key={recipe.id}>
-            <Box>
-              <h2>{recipe.title}</h2>
-              <p>
-                <em>Time to Complete: {recipe.minutesToComplete} minutes</em>
-                &nbsp;·&nbsp;
-                <cite>By {recipe.user.username}</cite>
-              </p>
-              <ReactMarkdown>{recipe.instructions}</ReactMarkdown>
-            </Box>
-          </Recipe>
-        ))
+    <div className="text-black dark:text-gray-200 grid sm:grid-cols-1 lg:grid-cols-4 gap-10 " >
+        {recipes.length > 0 ? (
+          recipes.map((recipe) => (
+            <div className="grid gap-10 p-10">
+              <div key={recipe.id}>
+                <div class=" flex-cols block p-6 transition-shadow bg-white sm:pr-12 group hover:shadow-sm rounded-md gap-5">
+                  <h2 class="mt-3 text-lg font-bold">{recipe.title}</h2>
+                  <p>Date: {recipe.minutesToComplete}</p>
+                  &nbsp;·&nbsp;
+                  <p class="mt-3 text-sm text-gray-500">
+                    {recipe.instructions}
+                  </p>
+                  
+                  <p class="relative inline-block mt-16 text-sm font-bold text-indigo-600">
+                    <span
+                      class="absolute inset-x-0 bottom-0 transition-transform transform bg-indigo-100 h-4/5 group-hover:scale-110"
+                    ></span>
+                    <span class="relative">{recipe.user.username}</span>
+                  </p>
+                  <button onClick={handleDeletePost}> Seen </button>
+                </div>
+                {/* <h2>{recipe.title}</h2>
+            <p>
+              <em>Time to Complete: {recipe.minutesToComplete} minutes</em>
+              &nbsp;·&nbsp;
+              <cite>By {recipe.user.username}</cite>
+            </p>
+            <ReactMarkdown>{recipe.instructions}</ReactMarkdown> */}
+              </div>
+            </div>
+
+          )
+      )
       ) : (
-        <>
-          <h2>No Recipes Found</h2>
-          <Button as={Link} to="/new">
-            Make a announcement
-          </Button>
-        </>
+      <>
+        <h2>No Announcements Found</h2>
+      </>
       )}
-    </Wrapper>
+    </div>
   );
 }
 
-const Wrapper = styled.section`
-  max-width: 800px;
-  margin: 40px auto;
-`;
-
-const Recipe = styled.article`
-  margin-bottom: 24px;
-`;
 
 export default Messages;

@@ -1,23 +1,11 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
-import styled from "styled-components";
-import ReactMarkdown from "react-markdown";
-import { Button, Error, FormField, Input, Label, Textarea } from "../styles";
+import { Button, Error, div, Input, Label, Textarea } from "../styles";
 
 function NewRecipe({ user }) {
-  const [title, setTitle] = useState("My Awesome Recipe");
-  const [minutesToComplete, setMinutesToComplete] = useState("30");
-  const [instructions, setInstructions] = useState(`Here's how you make it.
-  
-## Ingredients
-
-- 1c Sugar
-- 1c Spice
-
-## Instructions
-
-**Mix** sugar and spice. _Bake_ for 30 minutes.
-  `);
+  const [title, setTitle] = useState("");
+  const [minutesToComplete, setMinutesToComplete] = useState("");
+  const [instructions, setInstructions] = useState(``);
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
@@ -46,11 +34,11 @@ function NewRecipe({ user }) {
   }
 
   return (
-    <Wrapper>
-      <WrapperChild>
-        <h2>Create Recipe</h2>
+    <div className="text-gray-500 dark:text-white w-auto">
+      <div>
+        <h2>Create Announcement</h2>
         <form onSubmit={handleSubmit}>
-          <FormField>
+          <div>
             <Label htmlFor="title">Title</Label>
             <Input
               type="text"
@@ -58,60 +46,66 @@ function NewRecipe({ user }) {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
-          </FormField>
-          <FormField>
-            <Label htmlFor="minutesToComplete">Minutes to complete</Label>
+          </div>
+          <div>
+            <Label htmlFor="minutesToComplete">Date</Label>
             <Input
-              type="number"
+              type="date"
               id="minutesToComplete"
               value={minutesToComplete}
               onChange={(e) => setMinutesToComplete(e.target.value)}
             />
-          </FormField>
-          <FormField>
-            <Label htmlFor="instructions">Instructions</Label>
+          </div>
+          <div>
+            <Label htmlFor="Announcement">Announcement</Label>
             <Textarea
-              id="instructions"
+              id="Announcement"
               rows="10"
               value={instructions}
               onChange={(e) => setInstructions(e.target.value)}
             />
-          </FormField>
-          <FormField>
+          </div>
+          <div>
             <Button color="primary" type="submit">
-              {isLoading ? "Loading..." : "Submit Recipe"}
+              {isLoading ? "Loading..." : "Submit Announcement"}
             </Button>
-          </FormField>
-          <FormField>
+          </div>
+          <div>
             {errors.map((err) => (
               <Error key={err}>{err}</Error>
             ))}
-          </FormField>
+          </div>
         </form>
-      </WrapperChild>
-      <WrapperChild>
+
+
+      </div>
+
+      <div>
         <h1>{title}</h1>
         <p>
-          <em>Time to Complete: {minutesToComplete} minutes</em>
-          &nbsp;·&nbsp;
           <cite>By {user.username}</cite>
+          <br />
+          <em>Date: {minutesToComplete}</em>
+          &nbsp;·&nbsp;
+          <br />
+          <cite>Announcement: {instructions}</cite>
         </p>
-        <ReactMarkdown>{instructions}</ReactMarkdown>
-      </WrapperChild>
-    </Wrapper>
+
+        <div href="" class="block p-6 transition-shadow bg-white sm:pr-12 group hover:shadow-sm  w-15">
+          <h2 class="mt-3 text-lg font-bold">{title}</h2>
+          <em>Date: {minutesToComplete}</em>
+          <p class="mt-3 text-sm text-gray-500">
+            {instructions}
+          </p>
+          <p class="relative inline-block mt-16 text-sm font-bold text-indigo-600">
+            <span class="relative">By {user.username}</span>
+          </p>
+        </div>
+      </div>
+
+
+
+    </div>
   );
 }
-
-const Wrapper = styled.section`
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 16px;
-  display: flex;
-  gap: 24px;
-`;
-
-const WrapperChild = styled.div`
-  flex: 1;
-`;
-
 export default NewRecipe;
