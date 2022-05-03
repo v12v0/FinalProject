@@ -15,6 +15,7 @@ import { NavLink } from "react-router-dom";
 
 function App() {
   const [user, setUser] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
   // const [posts, setPosts] = useState([]);
 
 
@@ -38,7 +39,8 @@ function App() {
   return (
 
     <main class="bg-gray-100 dark:bg-gray-800 rounded-2xl relative h-screen overflow-hidden relative">
-      <NavBar user={user} setUser={setUser} />
+      
+      {/* <NavBar user={user} setUser={setUser} /> */}
       <div class="flex items-start justify-between">
         <div class="h-screen hidden lg:block my-4 ml-4 shadow-lg relative w-80">
           <div class="bg-white h-full rounded-2xl dark:bg-gray-700">
@@ -49,7 +51,7 @@ function App() {
           </div>
         </div>
         <div class="flex flex-col w-full pl-0 md:p-4 md:space-y-4">
-          <Header />
+          <Header user={user} setUser={setUser} />
           {/* dashboard display*/}
           <Switch>
             <Route exact path="/new">
@@ -59,10 +61,16 @@ function App() {
               <Dashboard user={user} setUser={setUser} />
             </Route>
             <Route exact path="/Messages">
-            <NavLink to="/new">New announcement</NavLink>
-              <div className="grid gap-10 p-10">
-              
-              <Messages />
+              <div className="flex justify-end mr-5">
+                <div class=" rounded-sm flex relative px-8 py-3 overflow-hidden border border-indigo-600 group focus:outline-none focus:ring" href="/download">
+                  <span class="absolute inset-x-0 top-0 h-[2px] transition-all bg-indigo-600 group-hover:h-full group-active:bg-indigo-500"></span>
+                  <span class="relative text-sm font-medium text-indigo-600 transition-colors group-hover:text-white">
+                    <NavLink to="/new" className="text-black dark:text-gray-200">New announcement</NavLink>
+                  </span>
+                </div>
+              </div>
+              <div className="grid gap-10 p-10 overflow-auto h-screen">
+                <Messages />
               </div>
             </Route>
             <Route exact path="/About">

@@ -8,6 +8,7 @@ function NewRecipe({ user }) {
   const [instructions, setInstructions] = useState(``);
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  
   const history = useHistory();
 
   function handleSubmit(e) {
@@ -35,11 +36,11 @@ function NewRecipe({ user }) {
 
   return (
     <div className="text-gray-500 dark:text-white w-auto">
-      <div>
+      <div className="text-gray-500 dark:text-white w-auto">
         <h2>Create Announcement</h2>
         <form onSubmit={handleSubmit}>
           <div>
-            <Label htmlFor="title">Title</Label>
+            <Label className="text-gray-500 dark:text-white" htmlFor="title">Title</Label>
             <Input
               type="text"
               id="title"
@@ -47,19 +48,28 @@ function NewRecipe({ user }) {
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
+          {/* <div>
+            <Label htmlFor="title">Title</Label>
+            <Input
+              type="text"
+              id="title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div> */}
           <div>
             <Label htmlFor="minutesToComplete">Date</Label>
             <Input
-              type="date"
+              type="text"
               id="minutesToComplete"
               value={minutesToComplete}
               onChange={(e) => setMinutesToComplete(e.target.value)}
             />
           </div>
           <div>
-            <Label htmlFor="Announcement">Announcement</Label>
+            <Label htmlFor="announcement">Announcement</Label>
             <Textarea
-              id="Announcement"
+              id="Anncounment"
               rows="10"
               value={instructions}
               onChange={(e) => setInstructions(e.target.value)}
@@ -76,10 +86,7 @@ function NewRecipe({ user }) {
             ))}
           </div>
         </form>
-
-
       </div>
-
       <div>
         <h1>{title}</h1>
         <p>
