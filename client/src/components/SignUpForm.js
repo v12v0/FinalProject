@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { Button, Error, Input, FormField, Label, Textarea } from "../styles";
-
 function SignUpForm({ onLogin, onClick }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -173,11 +171,11 @@ function SignUpForm({ onLogin, onClick }) {
               <button type="submit" class="inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-blue-500 rounded-lg">
                 {isLoading ? "Loading..." : "Sign Up"}
               </button>
-              <FormField>
+              <div>
                 {errors.map((err) => (
                   <error key={err}>{err}</error>
                 ))}
-              </FormField>
+              </div>
             </div>
           </form>
         </div>

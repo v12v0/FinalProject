@@ -22,7 +22,7 @@ function Login({ onLogin }) {
 
           <div class="flex items-center space-x-4">
             <img src={Square} alt="square logo" class="w-10 h-10"/>
-            <h1 class="text-xl w-25 h-10 text-center flex justify-center items-center"> My Squares</h1>
+            <h1 class="text-xl w-25 h-10 text-center flex justify-center items-center"> Squares</h1>
           </div>
 
           <div class="flex justify-center items-center flex-1 w-0 lg:hidden">

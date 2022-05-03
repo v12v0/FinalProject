@@ -31,7 +31,7 @@ function About() {
                                 <p>
                                     Made for students by students. My Squares aims to eliminate the need to use multiple apps to manage your productivity
                                     workspace. In a world where single use apps have cluttered and complex, My Squares provides the
-                                    essentials and streamlines the work flow by providing users with only the essential features.  
+                                    essentials featuures and streamlines the work flow by providing users a clutterfree experience.  
                                     
                                 </p>
                             </article>

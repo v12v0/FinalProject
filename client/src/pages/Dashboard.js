@@ -20,7 +20,7 @@ function Dashboard({ user, setUser }) {
                     <div class="h-screen hidden lg:block my-4 ml-4 shadow-lg relative w-80">
                         <div class="bg-white h-full rounded-2xl dark:bg-gray-700">
                             <div class="flex items-center justify-center pt-6">
-                                <img src={square2} alt="square" className='w-10 h-10' />
+                                {/* <img src={square2} alt="square" className='w-10 h-10' /> */}
                             </div>
                             <SideNav user={user} setUser={setUser} />
                         </div>
