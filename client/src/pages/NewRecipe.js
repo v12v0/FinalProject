@@ -36,11 +36,11 @@ function NewRecipe({ user }) {
 
   return (
     <div className="text-gray-500 dark:text-white w-auto">
-      <div className="text-gray-500 dark:text-white w-auto">
+      <div className=" w-auto text-gray-500 dark:text-white">
         <h2>Create Announcement</h2>
         <form onSubmit={handleSubmit}>
           <div>
-            <Label className="text-gray-500 dark:text-white" htmlFor="title">Title</Label>
+            <Label className="text-white dark:text-white" htmlFor="title">Title</Label>
             <Input
               type="text"
               id="title"
@@ -60,10 +60,19 @@ function NewRecipe({ user }) {
           <div>
             <Label htmlFor="minutesToComplete">Date</Label>
             <Input
-              type="text"
+              type="date"
               id="minutesToComplete"
               value={minutesToComplete}
               onChange={(e) => setMinutesToComplete(e.target.value)}
+            />
+          </div>
+          <div>
+            <Label htmlFor="minutesToComplete">Image</Label>
+            <Input
+              type="file"
+              id="Date"
+              // value={minutesToComplete}
+              // onChange={(e) => setMinutesToComplete(e.target.value)}
             />
           </div>
           <div>
@@ -77,7 +86,7 @@ function NewRecipe({ user }) {
           </div>
           <div>
             <Button color="primary" type="submit">
-              {isLoading ? "Loading..." : "Submit Announcement"}
+              {isLoading ? "Loading..." : "Post Announcement"}
             </Button>
           </div>
           <div>
@@ -87,7 +96,7 @@ function NewRecipe({ user }) {
           </div>
         </form>
       </div>
-      <div>
+      {/* <div>
         <h1>{title}</h1>
         <p>
           <cite>By {user.username}</cite>
@@ -108,7 +117,7 @@ function NewRecipe({ user }) {
             <span class="relative">By {user.username}</span>
           </p>
         </div>
-      </div>
+      </div> */}
 
 
 
