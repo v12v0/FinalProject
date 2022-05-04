@@ -58,18 +58,18 @@ function App() {
               <NewRecipe user={user} />
             </Route>
             <Route exact path="/">
-              <Dashboard user={user} setUser={setUser} />
+              <Squares user={user} setUser={setUser} />
             </Route>
             <Route exact path="/Messages">
               <div className="flex justify-end mr-5">
-                <div class=" rounded-sm flex relative px-8 py-3 overflow-hidden border border-indigo-600 group focus:outline-none focus:ring" href="/download">
-                  <span class="absolute inset-x-0 top-0 h-[2px] transition-all bg-indigo-600 group-hover:h-full group-active:bg-indigo-500"></span>
-                  <span class="relative text-sm font-medium text-indigo-600 transition-colors group-hover:text-white">
-                    <NavLink to="/new" className="text-black dark:text-gray-200">New announcement</NavLink>
+                <NavLink to="/new" class=" rounded-sm flex relative px-8 py-3 overflow-hidden border border-sly-200 group focus:outline-none focus:ring" href="/download">
+                  <span class="absolute inset-x-0 top-0 h-[2px] transition-all bg-sky-100 group-hover:h-full group-active:bg-blue-200"></span>
+                  <span class="relative text-sm font-medium text-gray-600 dark:text-gray-200 transition-colors group-hover:text-gray-600">
+                    <NavLink to="/new" className="">New announcement</NavLink>
                   </span>
-                </div>
+                </NavLink>
               </div>
-              <div className="grid gap-10 p-10 overflow-auto h-screen">
+              <div className="grid gap-5 p-5 overflow-auto h-screen">
                 <Messages />
               </div>
             </Route>

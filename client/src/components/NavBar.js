@@ -86,7 +86,7 @@ function NavBar({ user, setUser }) {
                     <li className="relative">
                         <div className="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-black dark:text-gray-200 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out">
                             {/* <img src={fishingSVG} alt="home icon" className="w-6 h-6 mr-3 " /> */}
-                            <NavLink to="/Messages">Messages</NavLink>
+                            <NavLink to="/Messages">Announcements</NavLink>
                         </div>
                     </li>
                     <li className="relative">

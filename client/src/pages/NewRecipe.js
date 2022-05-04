@@ -8,7 +8,7 @@ function NewRecipe({ user }) {
   const [instructions, setInstructions] = useState(``);
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const history = useHistory();
 
   function handleSubmit(e) {
@@ -36,11 +36,11 @@ function NewRecipe({ user }) {
 
   return (
     <div className="text-gray-500 dark:text-white w-auto">
-      <div className="text-gray-500 dark:text-white w-auto">
+      <div className=" w-auto text-gray-500 dark:text-white">
         <h2>Create Announcement</h2>
         <form onSubmit={handleSubmit}>
           <div>
-            <Label className="text-gray-500 dark:text-white" htmlFor="title">Title</Label>
+            <Label className="text-white dark:text-white" htmlFor="title">Title</Label>
             <Input
               type="text"
               id="title"
@@ -60,10 +60,19 @@ function NewRecipe({ user }) {
           <div>
             <Label htmlFor="minutesToComplete">Date</Label>
             <Input
-              type="text"
+              type="date"
               id="minutesToComplete"
               value={minutesToComplete}
               onChange={(e) => setMinutesToComplete(e.target.value)}
+            />
+          </div>
+          <div>
+            <Label htmlFor="minutesToComplete">Image</Label>
+            <Input
+              type="file"
+              id="Date"
+            // value={minutesToComplete}
+            // onChange={(e) => setMinutesToComplete(e.target.value)}
             />
           </div>
           <div>
@@ -76,9 +85,15 @@ function NewRecipe({ user }) {
             />
           </div>
           <div>
-            <Button color="primary" type="submit">
-              {isLoading ? "Loading..." : "Submit Announcement"}
-            </Button>
+            {/* <Button color="primary" type="submit">
+              {isLoading ? "Loading..." : "Post Announcement"}
+            </Button> */}
+            <button type="submit" class="relative inline-block group focus:outline-none focus:ring" href="/download">
+              <span class="absolute inset-0 transition-transform translate-x-1.5 translate-y-1.5 bg-blue-200 group-hover:translate-y-0 group-hover:translate-x-0"></span>
+              <span class="relative inline-block px-8 py-3 text-sm font-bold tracking-widest text-black uppercase border-2 border-current group-active:text-opacity-75">
+              {isLoading ? "Loading..." : "Post Announcement"}
+              </span>
+            </button>
           </div>
           <div>
             {errors.map((err) => (
@@ -87,7 +102,7 @@ function NewRecipe({ user }) {
           </div>
         </form>
       </div>
-      <div>
+      {/* <div>
         <h1>{title}</h1>
         <p>
           <cite>By {user.username}</cite>
@@ -108,7 +123,7 @@ function NewRecipe({ user }) {
             <span class="relative">By {user.username}</span>
           </p>
         </div>
-      </div>
+      </div> */}
 
 
 
