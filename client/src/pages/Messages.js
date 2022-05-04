@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Modal from "../components/Modal";
 import { NavLink } from "react-router-dom";
 
 function Messages({ onDeletePost, posts }) {

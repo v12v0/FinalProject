@@ -8,7 +8,7 @@ function NewRecipe({ user }) {
   const [instructions, setInstructions] = useState(``);
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const history = useHistory();
 
   function handleSubmit(e) {
@@ -71,8 +71,8 @@ function NewRecipe({ user }) {
             <Input
               type="file"
               id="Date"
-              // value={minutesToComplete}
-              // onChange={(e) => setMinutesToComplete(e.target.value)}
+            // value={minutesToComplete}
+            // onChange={(e) => setMinutesToComplete(e.target.value)}
             />
           </div>
           <div>
@@ -85,9 +85,15 @@ function NewRecipe({ user }) {
             />
           </div>
           <div>
-            <Button color="primary" type="submit">
+            {/* <Button color="primary" type="submit">
               {isLoading ? "Loading..." : "Post Announcement"}
-            </Button>
+            </Button> */}
+            <button type="submit" class="relative inline-block group focus:outline-none focus:ring" href="/download">
+              <span class="absolute inset-0 transition-transform translate-x-1.5 translate-y-1.5 bg-blue-200 group-hover:translate-y-0 group-hover:translate-x-0"></span>
+              <span class="relative inline-block px-8 py-3 text-sm font-bold tracking-widest text-black uppercase border-2 border-current group-active:text-opacity-75">
+              {isLoading ? "Loading..." : "Post Announcement"}
+              </span>
+            </button>
           </div>
           <div>
             {errors.map((err) => (
