@@ -265,3 +265,17 @@
   .task-item-remove button:hover {
     color: tomato;
   }
+  
+
+
+button {
+	width: 25%;
+	height: 80px;
+	float: left;	
+	outline: none;	
+	font-size: 20px;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+}
+
+
