@@ -14,11 +14,10 @@ function SideNav({ user, setUser }) {
     }
     return (
         <nav class="mt-6">
-            
             <div>
-            <div class="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start" href="#">
+                <div class="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start" href="#">
                     <span class="mx-4 text-sm font-normal">
-                    <p>Hello, {user.username}!</p>
+                        <p>Hello, {user.username}!</p>
                     </span>
                 </div>
                 <div class="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500" href="#">
@@ -27,21 +26,17 @@ function SideNav({ user, setUser }) {
                     </span>
                 </div>
                 <div class="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500" href="#">
-                   
                     <span class="mx-4 text-sm font-normal">
                         <NavLink to="/Messages">announcements</NavLink>
                     </span>
                 </div>
                 <div class="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500" href="#">
-                    
                     <span class="mx-4 text-sm font-normal">
-                      
                         <NavLink to="/About">About</NavLink>
                     </span>
                 </div>
                 <div class="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500" href="#">
                     <span class="text-left">
-                       
                     </span>
                     <p class="mx-4 text-sm font-normal cursor-pointer" onClick={handleLogoutClick}>
                         Log Out

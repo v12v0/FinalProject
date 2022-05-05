@@ -34,7 +34,7 @@ function SignUpForm({ onLogin, onClick }) {
     });
   }
 
-  function handleClick(){
+  function handleClick() {
     onClick()
   }
 
@@ -160,7 +160,7 @@ function SignUpForm({ onLogin, onClick }) {
                 </span>
               </div>
             </div>
-        
+
 
             <div class="flex items-center justify-between">
               <p class="text-sm text-gray-500">
