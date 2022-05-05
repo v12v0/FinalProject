@@ -38,8 +38,7 @@ function App() {
 
   return (
 
-    <main class="bg-gray-100 dark:bg-gray-800 rounded-2xl relative h-screen overflow-hidden relative">
-      
+    <main class="bg-gray-100 dark:bg-gray-800 rounded-2xl h-screen overflow-hidden relative">
       {/* <NavBar user={user} setUser={setUser} /> */}
       <div class="flex items-start justify-between">
         <div class="h-screen hidden lg:block my-4 ml-4 shadow-lg relative w-80">
@@ -52,6 +51,7 @@ function App() {
         </div>
         <div class="flex flex-col w-full pl-0 md:p-4 md:space-y-4">
           <Header user={user} setUser={setUser} />
+          
           {/* dashboard display*/}
           <Switch>
             <Route exact path="/new">
@@ -81,10 +81,9 @@ function App() {
             </Route>
           </Switch>
           {/* end of dashboard display */}
+
         </div>
-
       </div>
-
       {/* <Footer /> */}
     </main>
 

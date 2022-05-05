@@ -29,7 +29,7 @@ function NavBar({ user, setUser }) {
         </button>
       </div> */}
 
-<header className="shadow-sm  bg-gray-100 dark:bg-gray-800 text-black dark:text-gray-200">
+<header className="shadow-sm  bg-gray-100 dark:bg-gray-800 text-black dark:text-gray-200 sm:text-red-300">
             <div
                 className="flex items-center justify-between space-around h-16 max-w-screen-xl px-4 mx-auto "
             >
