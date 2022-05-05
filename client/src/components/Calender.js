@@ -11,18 +11,18 @@ function Calender() {
                         May 2022
                     </div>
                     <div className="flex space-x-4">
-                        <button className="p-2 rounded-full bg-blue-500 text-white">
+                        <div className="p-2 rounded-full bg-blue-500 text-white">
                             <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M13.83 19a1 1 0 0 1-.78-.37l-4.83-6a1 1 0 0 1 0-1.27l5-6a1 1 0 0 1 1.54 1.28L10.29 12l4.32 5.36a1 1 0 0 1-.78 1.64z">
                                 </path>
                             </svg>
-                        </button>
-                        <button className="p-2 rounded-full bg-blue-500 text-white">
+                        </div>
+                        <div className="p-2 rounded-full bg-blue-500 text-white">
                             <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M10 19a1 1 0 0 1-.64-.23a1 1 0 0 1-.13-1.41L13.71 12L9.39 6.63a1 1 0 0 1 .15-1.41a1 1 0 0 1 1.46.15l4.83 6a1 1 0 0 1 0 1.27l-5 6A1 1 0 0 1 10 19z">
                                 </path>
                             </svg>
-                        </button>
+                        </div>
                     </div>
                 </div>
                 <div className="-mx-2">
