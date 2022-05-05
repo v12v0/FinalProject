@@ -1,6 +1,7 @@
 import React from 'react'
 import Weather from '../widgets/Weather'
 import Todo from '../components/Todo'
+import Widget3 from '../components/Widget3'
 
 function Squares() {
   return (
@@ -109,7 +110,7 @@ function Squares() {
                                 <div className="w-full sm:w-1/2 xl:w-1/3">
                                     <Todo />
                                 </div>
-                                 {/* end of todo list */}
+                                 
                                 <div className="w-full sm:w-1/2 xl:w-1/3">
                                     <div className="mb-4">
                                         <div className="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-700">
