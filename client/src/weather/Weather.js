@@ -51,7 +51,7 @@ function WeatherComponent() {
 					options={{appId, apiKey: apiKeyAlgolia, aroundLatLngViaIP: false}}
 				/>
 			</div>
-			<div className="container mx-auto font-sans md:w-128 w-full rounded-lg overflow-hidden bg-gray-900 shadow-lg mt-8">
+			<div className="container mx-auto font-sans md:w-128 w-full rounded-lg overflow-hidden bg-slate-600 dark:bg-gray-900 shadow-lg mt-8">
 				<CurrentWeather weather={currentWeather}/>
 			</div>
 		</div>
