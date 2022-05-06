@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -255,3 +256,6 @@
     color: tomato;
   }
   
+  .nice-dates-navigation, .nice-dates-day{
+    color: #111
+  }

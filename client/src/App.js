@@ -74,7 +74,9 @@ function App() {
               </div>
             </Route>
             <Route exact path="/About">
+              <div className="overflow-auto h-screen">
               <About />
+              </div>
             </Route>
             <Route exact path="/Squares">
               <Squares />

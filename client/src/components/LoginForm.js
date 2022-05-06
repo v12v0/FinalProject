@@ -38,8 +38,7 @@ function LoginForm({ onLogin }) {
               <h1 class="text-2xl font-bold sm:text-3xl">Get started today!</h1>
 
               <p class="mt-4 text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla
-                eaque error neque ipsa culpa autem, at itaque nostrum!
+                Log in or Sign Up to Experience the simplicity and easability of My Squares
               </p>
             </div>
 
