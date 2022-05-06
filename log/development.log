@@ -33466,3 +33466,195 @@ Started GET "/images/person/7.jpg" for 127.0.0.1 at 2022-05-05 15:50:43 -0500
   
 ActionController::RoutingError (No route matches [GET] "/images/person/7.jpg"):
   
+Started GET "/me" for 127.0.0.1 at 2022-05-05 16:48:40 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.03ms)
+Completed 200 OK in 50ms (Views: 13.7ms | ActiveRecord: 1.9ms | Allocations: 11035)
+
+
+Started GET "/images/person/5.jpg" for 127.0.0.1 at 2022-05-05 16:48:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/5.jpg"):
+  
+Started GET "/images/person/1.jpg" for 127.0.0.1 at 2022-05-05 16:48:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/1.jpg"):
+  
+Started GET "/images/person/6.jpg" for 127.0.0.1 at 2022-05-05 16:48:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/6.jpg"):
+  
+Started GET "/images/person/7.jpg" for 127.0.0.1 at 2022-05-05 16:48:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/7.jpg"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-05-05 16:50:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-05-05 16:50:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-05-06 10:18:51 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.61ms)
+Completed 200 OK in 62ms (Views: 17.9ms | ActiveRecord: 2.9ms | Allocations: 11031)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-05-06 10:18:52 -0500
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 887)
+
+
+Started GET "/images/person/1.jpg" for 127.0.0.1 at 2022-05-06 10:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/1.jpg"):
+  
+Started GET "/images/person/5.jpg" for 127.0.0.1 at 2022-05-06 10:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/5.jpg"):
+  
+Started GET "/images/person/6.jpg" for 127.0.0.1 at 2022-05-06 10:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/6.jpg"):
+  
+Started GET "/images/person/7.jpg" for 127.0.0.1 at 2022-05-06 10:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/7.jpg"):
+  
+Started GET "/images/person/5.jpg" for 127.0.0.1 at 2022-05-06 10:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/5.jpg"):
+  
+Started GET "/images/person/1.jpg" for 127.0.0.1 at 2022-05-06 10:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/1.jpg"):
+  
+Started GET "/images/person/6.jpg" for 127.0.0.1 at 2022-05-06 10:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/6.jpg"):
+  
+Started GET "/images/person/7.jpg" for 127.0.0.1 at 2022-05-06 10:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/7.jpg"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-05-06 10:24:39 -0500
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 9ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 878)
+
+
+Started GET "/images/person/1.jpg" for 127.0.0.1 at 2022-05-06 10:24:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/1.jpg"):
+  
+Started GET "/images/person/5.jpg" for 127.0.0.1 at 2022-05-06 10:24:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/5.jpg"):
+  
+Started GET "/images/person/6.jpg" for 127.0.0.1 at 2022-05-06 10:24:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/6.jpg"):
+  
+Started GET "/images/person/7.jpg" for 127.0.0.1 at 2022-05-06 10:24:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/7.jpg"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-05-06 10:27:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-05-06 10:27:17 -0500
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.86ms)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 886)
+
+
+Started GET "/images/person/1.jpg" for 127.0.0.1 at 2022-05-06 10:27:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/1.jpg"):
+  
+Started GET "/images/person/5.jpg" for 127.0.0.1 at 2022-05-06 10:27:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/5.jpg"):
+  
+Started GET "/images/person/6.jpg" for 127.0.0.1 at 2022-05-06 10:27:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/6.jpg"):
+  
+Started GET "/images/person/7.jpg" for 127.0.0.1 at 2022-05-06 10:27:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/7.jpg"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-05-06 10:29:04 -0500
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 886)
+
+
+Started GET "/images/person/1.jpg" for 127.0.0.1 at 2022-05-06 10:29:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/1.jpg"):
+  
+Started GET "/images/person/5.jpg" for 127.0.0.1 at 2022-05-06 10:29:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/5.jpg"):
+  
+Started GET "/images/person/6.jpg" for 127.0.0.1 at 2022-05-06 10:29:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/6.jpg"):
+  
+Started GET "/images/person/7.jpg" for 127.0.0.1 at 2022-05-06 10:29:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/person/7.jpg"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-05-06 10:33:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-05-06 10:33:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-05-06 10:34:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-05-06 10:34:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-05-06 10:34:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-05-06 10:34:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-05-06 10:34:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-05-06 10:34:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  

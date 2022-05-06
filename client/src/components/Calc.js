@@ -97,7 +97,7 @@ function Calc() {
     }(window, document));
     
     return (
-        <div className="mb-4">
+        <div className="shadow-lg rounded-2xl pt-1 pb-1 bg-white dark:bg-gray-700 w-full">
             <body>
 
                 <div class="calc-container">
@@ -107,31 +107,31 @@ function Calc() {
                     </div>
 
                     <div class="row">
-                        <button class="number" data-val="7">7</button>
-                        <button class="number" data-val="8">8</button>
-                        <button class="number" data-val="9">9</button>
-                        <button class="operator" data-val="÷">÷</button>
+                        <button class="number w-3/12 h-20 float-left text-xl cursor-pointer" data-val="7">7</button>
+                        <button class="number w-3/12 h-20 float-left text-xl cursor-pointer" data-val="8">8</button>
+                        <button class="number w-3/12 h-20 float-left text-xl cursor-pointer" data-val="9">9</button>
+                        <button class="operator w-3/12 h-20 float-left text-xl cursor-pointer" data-val="÷">÷</button>
                     </div>
 
                     <div class="row">
-                        <button class="number" data-val="4">4</button>
-                        <button class="number" data-val="5">5</button>
-                        <button class="number" data-val="6">6</button>
-                        <button class="operator" data-vl="x">x</button>
+                        <button class="number w-3/12 h-20 float-left text-xl cursor-pointer" data-val="4">4</button>
+                        <button class="number w-3/12 h-20 float-left text-xl cursor-pointer" data-val="5">5</button>
+                        <button class="number w-3/12 h-20 float-left text-xl cursor-pointer" data-val="6">6</button>
+                        <button class="operator w-3/12 h-20 float-left text-xl cursor-pointer" data-vl="x">x</button>
                     </div>
 
                     <div class="row">
-                        <button class="number" data-val="1">1</button>
-                        <button class="number" data-val="2">2</button>
-                        <button class="number" data-val="3">3</button>
-                        <button class="operator" data-val="-">-</button>
+                        <button class="number w-3/12 h-20 float-left text-xl cursor-pointer" data-val="1">1</button>
+                        <button class="number w-3/12 h-20 float-left text-xl cursor-pointer" data-val="2">2</button>
+                        <button class="number w-3/12 h-20 float-left text-xl cursor-pointer" data-val="3">3</button>
+                        <button class="operator w-3/12 h-20 float-left text-xl cursor-pointer" data-val="-">-</button>
                     </div>
 
                     <div class="row">
-                        <button class="number" data-val="0">0</button>
-                        <button class="operator" data-val="clear">CE</button>
-                        <button class="operator resolv" data-val="=">=</button>
-                        <button class="operator" data-val="+">+</button>
+                        <button class="number w-3/12 h-20 float-left text-xl cursor-pointer" data-val="0">0</button>
+                        <button class="operator w-3/12 h-20 float-left text-xl cursor-pointer" data-val="clear">CE</button>
+                        <button class="operator resolv w-3/12 h-20 float-left text-xl cursor-pointer" data-val="=">=</button>
+                        <button class="operator w-3/12 h-20 float-left text-xl cursor-pointer" data-val="+">+</button>
                     </div>
 
                 </div>
