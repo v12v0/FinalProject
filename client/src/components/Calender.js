@@ -11,7 +11,7 @@ function Calender() {
     return (
         <div className="mb-4 dark:bg-gray-700 rounded-2xl bg-white">
             <div className="shadow-lg rounded-2xl p-4">
-                <p className='text-center text-black dark:text-white'>
+                <p className='text-center text-[#0891b2]'>
                     Selected date: {date ? format(date, ' MMM dd, yyyy', { locale: enGB }) : 'none'}
                 </p>
                 <div>
