@@ -7,7 +7,12 @@ function About() {
                 <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24 text-gray-500 dark:text-gray-200 ">
                     <div class="max-w-3xl">
                         <h2 class="text-3xl font-bold sm:text-4xl">
-                            For the go getter, the doer, and the driven.
+                            For the 
+                            <span className='dark:text-cyan-200 text-cyan-400'> go getter</span>, 
+                            the <span className='dark:text-cyan-200 text-cyan-400'>doer</span>, 
+                            and the 
+                            <span className='dark:text-cyan-200 text-cyan-400'> driven</span>.
+                            
                         </h2>
                     </div>
 
@@ -29,13 +34,13 @@ function About() {
                                 </p>
                                 {/* <br/> */}
                                 <p>
-                                    My square's was created for those who want simplicity and intuitive features without the clutter and the confusion.
+                                    My Squares was created for those who want simplicity and intuitive features without the clutter and the confusion.
                                     Utilizing one centeralized workspace that allows users to handle their tasks, view thier calender, and announcements all at a single glance.
                                 </p>
                                 <p>
-                                    Made for students by students. My Squares aims to eliminate the need to use multiple apps to manage your productivity
+                                    My Squares aims to eliminate the need to use multiple apps to manage your productivity
                                     workspace. In a world where single use apps have become cluttered and complex, My Squares provides the
-                                    essentials features and streamlines the work flow by providing users a clean experience.
+                                    essentials features and streamlines the work flow by pivoting towards a clean and minimal experience.
                                 </p>
                             </article>
                         </div>

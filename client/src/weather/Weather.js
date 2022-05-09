@@ -16,6 +16,7 @@ function WeatherComponent() {
 		lon: -97.74
 	});
 	
+	
 	let [url, setUrl] = useState(`https://api.openweathermap.org/data/2.5/weather?lat=${currentWeather.lat}&lon=${currentWeather.lon}&appid=${apiKey}&units=metric`);
 	
 	useEffect(() => {
@@ -52,6 +53,7 @@ function WeatherComponent() {
 				/>
 			</div>
 			<div className="container mx-auto font-sans md:w-128 w-full rounded-lg overflow-hidden bg-slate-600 dark:bg-gray-900 shadow-lg mt-8">
+				
 				<CurrentWeather weather={currentWeather}/>
 			</div>
 		</div>
